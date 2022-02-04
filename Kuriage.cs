@@ -10,13 +10,28 @@ namespace _20211210
     {
         public static int kuriage10(int i)
         {
-            int surplus = i % 10;
             
-            if(surplus != 0)
-            {
-                i = (i - surplus) + 10;
-            }
 
+            if (i < 0)
+            {
+                i = i * -1;
+
+                int surplus = i % 10;
+                if (surplus != 0)
+                {
+                    i = (i - surplus) + 10;
+                }
+
+                i = i * -1;
+            }
+            else
+            {
+                int surplus = i % 10;
+                if (surplus != 0)
+                {
+                    i = (i - surplus) + 10;
+                }
+            }
             return i;
 
         }
